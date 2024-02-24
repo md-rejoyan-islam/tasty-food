@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scrollbar-color: #64d390 rgb(224, 249, 188);
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -80,8 +81,12 @@ nav ul {
   gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  nav ul {
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 20px;
+  }
+  nav ul,
+  .nav-icons {
     display: none;
   }
   nav .menu-btn {
@@ -96,7 +101,7 @@ nav ul {
 }
 
 nav ul li a {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   padding: 5px 8px;
   border-radius: 3px;
@@ -109,37 +114,97 @@ nav ul li a:hover {
   color: #f2f2f2;
   background-color: #64d390;
 }
-nav .logo {
+
+nav .nav-icons i {
+  border: 1px solid rgb(206, 232, 206);
+  border-radius: 5px;
+  background-color: rgb(239, 239, 241);
+  font-size: 14px;
+  margin-right: 4px;
+  cursor: pointer;
+  padding: 7px;
+  color: #000;
+}
+
+nav .logo a,
+i {
   font-size: 25px;
   font-weight: 700;
   color: #64d390;
 }
 
 section {
-  padding: 50px 6px;
+  padding: 60px 10px;
 }
 
 /* nav end  */
+
+/* about section  */
+#about {
+  display: flex;
+  justify-items: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 60px;
+  width: 100%;
+}
+#about div,
+figure {
+  flex: 1;
+}
+
+#about img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#about p {
+  color: #675f5f;
+}
+#about h2 {
+  color: #64d390;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#about h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column-reverse;
+  }
+  #about p,
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .head-text h1 {
+    font-size: 30px;
+  }
+}
+
 /* main head  */
 
 .head-text {
   gap: 20px;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  align-items: center; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.head-text div {
+.head-text div,
+figure {
   flex: 1;
 }
-.head-text figure {
-  flex: 1;
-}
+
 .head-text img {
+  max-width: 500px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -247,6 +312,7 @@ h4 {
 
 .review-item {
   text-align: center;
+  background-color: #fff;
   border: 1px solid #f2f2f2;
   max-width: 450px;
   margin: auto;
@@ -262,6 +328,11 @@ h4 {
   gap: 15px;
   height: 60px;
 }
+
+.review-head {
+  padding-bottom: 20px;
+}
+
 .review-item p {
   padding: 0 0px;
   margin: 0;
@@ -278,19 +349,59 @@ h4 {
   position: relative;
 }
 
-.review-item .review-man::after {
-  content: "";
-  background-image: url("../images/quotation.png");
-  position: absolute;
-  right: 0;
-
-  display: inline-block;
-
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  /* double content  */
+.review-card .review-head-left {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
+.review-head-left .fa-quote-right {
+  font-size: 50px;
+}
+
+/* review card animation  */
+.review-card::before,
+.review-card::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  transition: width 0.2s 0.15s linear, height 0.15s linear, opacity 0s 0.35s;
+}
+.review-card {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: inline-block;
+  padding-top: 2px;
+  background-color: transparent;
+  border: none;
+}
+
+.review-card::before {
+  top: 0;
+  right: 0;
+  border-top: 2px solid #64d390;
+  border-left: 2px solid #64d390;
+}
+.review-card::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #64d390;
+  border-right: 2px solid #64d390;
+  border-radius: 5px;
+}
+.review-card:hover::before,
+.review-card:hover::after {
+  width: 100%;
+  height: 99.5%;
+  opacity: 1;
+  border-radius: 5px;
+  transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
+}
+/* end card animation  */
 
 .review-item img {
   width: 45px;
@@ -322,9 +433,58 @@ h4 {
   font-size: 25px;
 }
 
+/* order section  */
+
+#order {
+  background: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#order h2 {
+  color: #64d390;
+  text-align: center;
+}
+#order h4 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 5px 0px 30px 0px;
+}
+#order form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #order form {
+    grid-template-columns: 1fr;
+  }
+  #order form label {
+    text-align: left;
+    display: block;
+  }
+}
+
+#order input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #dad5d5;
+  background-color: transparent;
+}
+
+#order input:focus,
+textarea:focus {
+  outline: 2px solid #64d390;
+}
+
 /* dish section  */
 .dish {
-  background-color: #eeeeee;
+  background-color: rgb(239, 239, 241);
 }
 
 .dish h2,
@@ -342,6 +502,18 @@ h4 {
   font-weight: 600;
   margin: 5px 0px 30px 0px;
 }
+.dish-item h5 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+.dish-item p {
+  color: #5f5858;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
 
 .dishes {
   display: grid;
@@ -353,8 +525,8 @@ h4 {
 
 .dish-item {
   text-align: center;
+  transition: 0.3s;
   position: relative;
-  border: 1px solid #f2f2f2;
   background-color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -362,10 +534,16 @@ h4 {
 }
 
 .dish-item img {
-  max-width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.dish-item:hover img {
+  scale: 1.05;
+  transition: all 0.5s linear;
 }
 
 .rating i {
@@ -373,7 +551,15 @@ h4 {
 }
 
 .dish-item i {
-  font-size: 16px;
+  font-size: 13px;
+}
+
+.dish-item .favorite i {
+  display: none;
+  background-color: #64d39079;
+  padding: 7px;
+  border-radius: 100%;
+  color: #fff;
 }
 
 .dish-item .favorite {
@@ -393,16 +579,24 @@ h4 {
   cursor: pointer;
 }
 
-.dish-item .favorite:hover i {
-  color: red;
-  transition: all 0.3s ease;
+.dish-item:hover i {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dish-item .favorite:hover i,
+.dish-item .favorite i.active {
+  color: rgb(243, 9, 9);
+  transition: all 0.5s ease;
+  background-color: #64d390;
 }
 
 .add-to-card span {
   color: #64d390;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
-  margin: 6px;
+  display: inline-block;
+  margin: 10px;
 }
 
 .add-to-card .btn {
@@ -413,19 +607,15 @@ h4 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-
-.dish-item h5 {
-  text-align: center;
-  font-size: 20px;
-  margin: 0;
-  padding: 15px 0;
+.add-to-card .btn:hover {
+  background-color: #64d390;
+  transition: all 0.3s ease;
 }
 
 /* footer  */
 footer {
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 }
 
 footer .container {
@@ -454,7 +644,10 @@ footer ul li a {
   font-size: 15px;
   font-weight: 500;
   padding: 10px 0;
-  line-height: 1.6;
+  line-height: 2;
+}
+footer ul i {
+  font-size: 18px;
 }
 
 footer ul li a:hover {
@@ -467,6 +660,12 @@ footer ul li a:hover {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 13px;
+  padding: 0 4px 20px 4px;
 }
 
 @media screen and (max-width: 768px) {

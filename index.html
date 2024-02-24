@@ -2,22 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.webp"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Taste</title>
   </head>
   <body>
     <header>
       <nav class="container">
-        <a href="" class="logo">Taste</a>
+        <div class="logo">
+          <i class="fa-solid fa-utensils"></i>
+          <a href="/" class="logo">Taste</a>
+        </div>
         <ul class="nav-links">
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#dish">Menu</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#review">Review</a></li>
+          <li><a href="#order">Order</a></li>
         </ul>
+        <div class="nav-icons">
+          <a href="" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="" title="Favorite">
+            <i class="fa-solid fa-heart"></i>
+          </a>
+          <a href="" title="Add to card">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
         <span class="menu-btn">
           <i class="fa-solid fa-bars"></i>
         </span>
@@ -29,26 +54,57 @@
         <div>
           <h1>Delicious Food</h1>
           <p>Enjoy the taste of delicious food</p>
-          <a href="" class="btn">View Menu</a>
+          <a href="#dish" class="btn">View Menu</a>
         </div>
         <figure>
-          <img src="./assets/images/head-img.jpg" alt="" />
+          <img src="./assets/images/home-img-1.png" alt="" />
+        </figure>
+      </section>
+      <!-- about section  -->
+      <section class="container" id="about">
+        <div>
+          <h2>About Us</h2>
+          <h3>We make good and tasty food</h3>
+          <p>
+            Satisfy your cravings with our mouthwatering burgers at Resto. Each
+            bite is a symphony of flavors, featuring premium, juicy patties,
+            fresh toppings, and handcrafted sauces. Elevate your burger
+            experience with us where taste meets perfection in every delicious
+            bite. Satisfy your cravings with our mouthwatering burgers at Resto.
+            Each bite is a symphony of flavors, featuring premium, juicy
+            patties, fresh toppings, and handcrafted sauces.
+          </p>
+          <p>
+            Elevate your burger experience with us where taste meets perfection
+            in every delicious bite. Satisfy your cravings with our
+            mouthwatering burgers at Resto. Each bite is a symphony of flavors,
+            featuring premium, juicy patties, fresh toppings, and handcrafted
+            sauces. Elevate your burger experience with us where taste meets
+            perfection in every delicious bite.
+          </p>
+        </div>
+        <figure>
+          <img src="./assets/images/pexels-jane-doan-1099680.jpg" alt="" />
         </figure>
       </section>
       <!-- dishes section  -->
-      <section class="dish">
+      <section class="dish" id="dish">
         <div class="container">
           <h2>Our Dishes</h2>
           <h4>POPULAR DISHES</h4>
           <div class="dishes">
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart active"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -63,12 +119,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -83,12 +143,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -103,12 +167,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -123,12 +191,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -143,12 +215,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart active"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -163,12 +239,16 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
               </div>
               <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
               <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -183,10 +263,35 @@
             </div>
             <div class="dish-item">
               <figure>
-                <img src="./assets/images/dish-item-1.jpg" alt="" />
+                <img src="./assets/images/foods/10.png" alt="" />
               </figure>
               <div class="favorite">
                 <i class="fa-solid fa-heart"></i>
+              </div>
+              <h5>Tasky Food</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus, minus dicta. Saepe vel itaque perspiciatis?
+              </p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="add-to-card">
+                <span>$20</span>
+                <a href="" class="btn">Add To Cart</a>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <figure>
+                <img src="./assets/images/foods/22.png" alt="" />
+              </figure>
+              <div class="favorite">
+                <i class="fa-solid fa-heart active"></i>
               </div>
               <h5>Tasky Food</h5>
               <div class="rating">
@@ -206,7 +311,7 @@
       </section>
 
       <!-- services section  -->
-      <section class="service">
+      <section class="service" id="service">
         <div class="container">
           <h2>Services</h2>
           <h4>We provide best food services</h4>
@@ -223,7 +328,7 @@
             </div>
             <div class="service-item">
               <i class="fa-solid fa-truck-fast"></i>
-              <h3>Your Order</h3>
+              <h3>Shipping</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Deleniti excepturi facere eius veniam repudiandae eveniet
@@ -233,7 +338,7 @@
             </div>
             <div class="service-item">
               <i class="fa-solid fa-right-to-bracket"></i>
-              <h3>Your Order</h3>
+              <h3>Delivered</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Deleniti excepturi facere eius veniam repudiandae eveniet
@@ -245,104 +350,195 @@
         </div>
       </section>
       <!-- review section  -->
-      <section class="review">
+      <section class="review" id="review">
         <div class="container">
           <h2>Customer Review</h2>
           <h4>What are they say</h4>
           <div class="reviews">
-            <div class="review-item">
-              <div class="review-head">
-                <img src="./assets/images/man.png" alt="" />
-                <div class="review-man">
-                  <h3>John Doe</h3>
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+            <div class="review-card">
+              <div class="review-item">
+                <div class="review-head">
+                  <img src="./assets/images/man.png" alt="" />
+                  <div class="review-head-left">
+                    <div class="review-man">
+                      <h3>John Doe</h3>
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
                   </div>
                 </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                  quidem, voluptates, quae, doloremque, doloribus quas quia
+                  voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
+                  voluptates quos quidem, voluptates, quae, doloremque,
+                  doloribus quas quia voluptatem nemo tempore quibusdam autem.
+                  Quisquam, quod, quae voluptates
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                quidem, voluptates, quae, doloremque, doloribus quas quia
-                voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
-                voluptates quos quidem, voluptates, quae, doloremque, doloribus
-                quas quia voluptatem nemo tempore quibusdam autem. Quisquam,
-                quod, quae voluptates
-              </p>
             </div>
-            <div class="review-item">
-              <div class="review-head">
-                <img src="./assets/images/man.png" alt="" />
-                <div class="review-man">
-                  <h3>John Doe</h3>
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+            <div class="review-card">
+              <div class="review-item">
+                <div class="review-head">
+                  <img src="./assets/images/man.png" alt="" />
+                  <div class="review-head-left">
+                    <div class="review-man">
+                      <h3>John Doe</h3>
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
                   </div>
                 </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                  quidem, voluptates, quae, doloremque, doloribus quas quia
+                  voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
+                  voluptates quos quidem, voluptates, quae, doloremque,
+                  doloribus quas quia voluptatem nemo tempore quibusdam autem.
+                  Quisquam, quod, quae voluptates
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                quidem, voluptates, quae, doloremque, doloribus quas quia
-                voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
-                voluptates quos quidem, voluptates, quae, doloremque, doloribus
-                quas quia voluptatem nemo tempore quibusdam autem. Quisquam,
-                quod, quae voluptates
-              </p>
             </div>
-            <div class="review-item">
-              <div class="review-head">
-                <img src="./assets/images/man.png" alt="" />
-                <div class="review-man">
-                  <h3>John Doe</h3>
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+            <div class="review-card">
+              <div class="review-item">
+                <div class="review-head">
+                  <img src="./assets/images/man.png" alt="" />
+                  <div class="review-head-left">
+                    <div class="review-man">
+                      <h3>John Doe</h3>
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
                   </div>
                 </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                  quidem, voluptates, quae, doloremque, doloribus quas quia
+                  voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
+                  voluptates quos quidem, voluptates, quae, doloremque,
+                  doloribus quas quia voluptatem nemo tempore quibusdam autem.
+                  Quisquam, quod, quae voluptates
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                quidem, voluptates, quae, doloremque, doloribus quas quia
-                voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
-                voluptates quos quidem, voluptates, quae, doloremque, doloribus
-                quas quia voluptatem nemo tempore quibusdam autem. Quisquam,
-                quod, quae voluptates
-              </p>
             </div>
-            <div class="review-item">
-              <div class="review-head">
-                <img src="./assets/images/man.png" alt="" />
-                <div class="review-man">
-                  <h3>John Doe</h3>
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+            <div class="review-card">
+              <div class="review-item">
+                <div class="review-head">
+                  <img src="./assets/images/man.png" alt="" />
+                  <div class="review-head-left">
+                    <div class="review-man">
+                      <h3>John Doe</h3>
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
                   </div>
                 </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                  quidem, voluptates, quae, doloremque, doloribus quas quia
+                  voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
+                  voluptates quos quidem, voluptates, quae, doloremque,
+                  doloribus quas quia voluptatem nemo tempore quibusdam autem.
+                  Quisquam, quod, quae voluptates
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                quidem, voluptates, quae, doloremque, doloribus quas quia
-                voluptatem nemo tempore quibusdam autem. Quisquam, quod, quae
-                voluptates quos quidem, voluptates, quae, doloremque, doloribus
-                quas quia voluptatem nemo tempore quibusdam autem. Quisquam,
-                quod, quae voluptates
-              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- order serction  -->
+      <section class="order-section" id="order">
+        <div class="order container">
+          <h2>Order Now</h2>
+          <h4>Which One You Want!</h4>
+          <form action="">
+            <div>
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="enter your name"
+              />
+            </div>
+            <div>
+              <label for="location">Your Location</label>
+              <input
+                type="text"
+                name="name"
+                id="location"
+                placeholder="enter your location"
+              />
+            </div>
+            <div>
+              <label for="phone">Your Number</label>
+              <input
+                type="text"
+                name="name"
+                id="phone"
+                placeholder="enter your number"
+              />
+            </div>
+            <div>
+              <label for="date">Delevary Date</label>
+              <input type="date" name="name" id="date" />
+            </div>
+            <div>
+              <label for="food">Food Name</label>
+              <input
+                type="text"
+                name="food"
+                id="food"
+                placeholder="enter food name"
+              />
+            </div>
+            <div>
+              <label for="add-food">Additional Food</label>
+              <input
+                type="text"
+                name="food"
+                id="add-food"
+                placeholder="enter extra food name"
+              />
+            </div>
+            <div class="text-area">
+              <label for="message">Message</label
+              ><textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit"></button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -410,6 +606,8 @@
           </ul>
         </div>
       </div>
+
+      <p>&copy; Copyrights 2024 By Md.Rejoyan Islam. All Rights Reserved.</p>
     </footer>
 
     <!-- font awesome -->
