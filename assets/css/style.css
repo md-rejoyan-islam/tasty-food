@@ -5,6 +5,8 @@
   font-family: "Poppins", sans-serif;
   scrollbar-color: #64d390 rgb(224, 249, 188);
   scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: start;
 }
 
 .container {
@@ -64,6 +66,12 @@ figure {
 header {
   /* bottom shadom  */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  left: 0;
+  background-color: #fff;
 }
 nav {
   display: flex;
@@ -138,6 +146,9 @@ section {
 }
 
 /* nav end  */
+main {
+  margin-top: 78px;
+}
 
 /* about section  */
 #about {
