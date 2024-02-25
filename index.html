@@ -20,32 +20,54 @@
   <body>
     <header>
       <nav class="container">
-        <div class="logo">
-          <i class="fa-solid fa-utensils"></i>
-          <a href="/" class="logo">Taste</a>
+        <div class="horizontal-menu">
+          <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            <a href="/" class="logo">Taste</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dish">Menu</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="#order">Order</a></li>
+          </ul>
+          <div class="nav-icons">
+            <a href="" title="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="" title="Favorite">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="" title="Add to card">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+          <span class="menu-btn" id="openBtn">
+            <i class="fa-solid fa-bars"></i>
+          </span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#dish">Menu</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#review">Review</a></li>
-          <li><a href="#order">Order</a></li>
-        </ul>
-        <div class="nav-icons">
-          <a href="" title="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-          <a href="" title="Favorite">
-            <i class="fa-solid fa-heart"></i>
-          </a>
-          <a href="" title="Add to card">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
+
+        <div class="vertical-menu show">
+          <div class="logo">
+            <span>
+              <i class="fa-solid fa-utensils"></i>
+              <a href="/" class="logo">Taste</a>
+            </span>
+            <button id="closeBtn">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dish">Menu</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="#order">Order</a></li>
+          </ul>
         </div>
-        <span class="menu-btn">
-          <i class="fa-solid fa-bars"></i>
-        </span>
       </nav>
     </header>
     <main>

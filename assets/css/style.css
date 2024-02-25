@@ -70,10 +70,11 @@ header {
   top: 0;
   right: 0;
   z-index: 1000;
+  height: 78px;
   left: 0;
   background-color: #fff;
 }
-nav {
+nav .horizontal-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,27 +85,89 @@ nav .menu-btn {
   display: none;
 }
 
+.vertical-menu {
+  display: none;
+}
+
 nav ul {
   display: flex;
   gap: 20px;
 }
 
 @media screen and (max-width: 800px) {
-  nav {
-    padding: 20px;
+  #closeBtn {
+    padding: 8px;
+    width: 33px;
+    border: none;
+    height: 33px;
+    border-radius: 4px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-  nav ul,
-  .nav-icons {
+  #closeBtn:hover {
+    color: #1f0f0f;
+  }
+  #closeBtn i {
+    font-size: 16px;
+    color: inherit;
+  }
+
+  nav {
+    padding: 0 10px;
+  }
+  .horizontal-menu .nav-links {
+    padding: 0;
+    margin: 0;
     display: none;
   }
+
+  nav .show {
+    display: none;
+  }
+
+  .vertical-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #d7d7d7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+
   nav .menu-btn {
     display: block;
     font-size: 25px;
     cursor: pointer;
   }
   nav .logo {
-    margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0 10px 0;
+  }
+  nav .logo a {
+    margin: 0;
+    padding: 0;
+  }
+  .logo span {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 4px;
   }
 }
 
