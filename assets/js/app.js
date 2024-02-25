@@ -62,10 +62,8 @@ window.addEventListener("load", () => {
 function activeLinkColorChange(id) {
   const navlink = document.querySelectorAll(".nav-links");
 
-  console.log(navlink);
   Array.from(navlink[0].children).forEach((child) => {
     const children = Array.from(child.children)[0];
-
     if (children.href.split("#")[1] === id) {
       children.classList.add("active");
     } else {
@@ -81,4 +79,8 @@ function activeLinkColorChange(id) {
       children.classList.remove("active");
     }
   });
+  if (id == undefined) {
+    navlink[0].firstElementChild.children[0].classList.add("active");
+    navlink[1].firstElementChild.children[0].classList.add("active");
+  }
 }
