@@ -640,6 +640,12 @@ h4 {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .dish-item .favorite i {
+    display: block;
+  }
+}
+
 .dish-item .favorite {
   position: absolute;
   background-color: #fff;
