@@ -1,7 +1,8 @@
 const navlink = document.querySelectorAll(".nav-links");
-
 const closeBtn = document.getElementById("closeBtn");
 const openBtn = document.getElementById("openBtn");
+
+// close and open button event
 closeBtn.addEventListener("click", () => {
   const vMenu = document.querySelector(".vertical-menu");
   vMenu.classList.toggle("show");
@@ -10,13 +11,6 @@ openBtn.addEventListener("click", () => {
   const vMenu = document.querySelector(".vertical-menu");
   vMenu.classList.toggle("show");
 });
-
-// if location change
-// window.addEventListener("hashchange", (e) => {
-//   const id = e.newURL.split("#")[1];
-//   console.log(id);
-//   activeLinkColorChange(id);
-// });
 
 // navlink click event
 const clickEvents = navlink[0].addEventListener("click", (e) => {
@@ -27,14 +21,10 @@ const clickEvents = navlink[0].addEventListener("click", (e) => {
     });
 
     activeLinkColorChange(id);
-    // document.getElementById(id).scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "start",
-    //   inline: "nearest",
-    // });
   }
 });
 
+// navlink click event
 window.addEventListener("load", () => {
   const headingsId = document.querySelectorAll("section");
 
@@ -62,6 +52,7 @@ window.addEventListener("load", () => {
 function activeLinkColorChange(id) {
   const navlink = document.querySelectorAll(".nav-links");
 
+  // small screen
   Array.from(navlink[0].children).forEach((child) => {
     const children = Array.from(child.children)[0];
     if (children.href.split("#")[1] === id) {
@@ -70,6 +61,7 @@ function activeLinkColorChange(id) {
       children.classList.remove("active");
     }
   });
+  // large screen
   Array.from(navlink[1].children).forEach((child) => {
     const children = Array.from(child.children)[0];
 
