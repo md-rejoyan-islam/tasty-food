@@ -1,6 +1,6 @@
 ## Tasty Food 🍔🍕🍣
 
-Welcome to the Absolutely Tasty Food project! This web application allows users to explore a variety of delicious food items, add them to their cart, and place orders. The project is built using HTML5, CSS3, and JavaScript.
+Delicious Food is a project aimed at providing high-quality, tasty food that satisfies cravings and elevates the dining experience. It features mouthwatering burgers with premium, juicy patties, fresh toppings, and handcrafted sauces. The project ensures top-notch food services, a streamlined order process, and efficient delivery to enhance customer satisfaction.
 
 ### Techonolgy
 
